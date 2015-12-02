@@ -3,12 +3,11 @@ import tweepy
 __author__ = 'dedunumax'
 
 '''
-
 This script will remove all the followers from your twitter account. For that first it will block user one by one and
 then unblock them. If you are following your followers, you won't be subscribed to them anymore once you run this job.
 Rub this script carefully.
 
-Install tweepy using pip. To install tweepy run below command in your terminal.
+Install tweepy module using pip. To install tweepy run below command in your terminal.
 sudo pip install tweepy
 
 Please replace consumer_key and consumer_secret. Visit https://apps.twitter.com to get your consumer_key and
