@@ -1,11 +1,10 @@
 import tweepy
 
-__author__ = 'dedunumax'
+__author__ = 'original dedunumax, fokred and changed by SherifShehata' #forked from https://gist.github.com/dedunumax/91992ac6f1940be5d391
 
 '''
 This script will remove all the followers from your twitter account. For that first it will block user one by one and
-then unblock them. If you are following your followers, you won't be subscribed to them anymore once you run this job.
-Rub this script carefully.
+then unblock them. 
 
 Install tweepy module using pip. To install tweepy run below command in your terminal.
 sudo pip install tweepy
@@ -17,8 +16,8 @@ Once you generate consumer key create an access token from same twitter page. Re
 access_token_secret with provided values. Then run the script.
 '''
 
-consumer_key = '<consumer_key>'
-consumer_secret = '<consumer_secret>'
+consumer_key = '<API_Key>'
+consumer_secret = '<API_secret>'
 access_token = '<access_token>'
 access_token_secret = '<access_token_secret>'
 
