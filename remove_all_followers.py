@@ -6,7 +6,7 @@ __author__ = 'original dedunumax, fokred and changed by SherifShehata' #forked f
 
 '''
 This script will remove all the followers from your twitter account. For that first it will block user one by one and
-then unblock them. 
+then unblock them. If the follow is mutual, the follower isn't removed.
 
 Install tweepy module using pip. To install tweepy run below command in your terminal.
 sudo pip install tweepy
