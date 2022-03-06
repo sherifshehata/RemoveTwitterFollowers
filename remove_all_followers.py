@@ -45,7 +45,7 @@ auth.set_access_token(access_token, access_token_secret)
 
 api = tweepy.API(auth)
 
-followers_list = api.get_follower_ids(screen_name=SCREEN_NAME)
+followers_list = api.get_follower_ids(screen_name=screen_name)
 
 print(len(followers_list))
       
@@ -53,8 +53,13 @@ i = 1
 for user in followers_list:
     print (i, user)
     
-    api.create_block(user_id==user)
-    api.destroy_block(user_id==user)
-    print user
+    friendship = do_or_wait_15('api.get_friendship(source_screen_name = "'+ me +'", target_id = '+ str(user)+')')
+    #print(friendship)
     
+    if friendship[0].following== True:
+        print("I am following " + api.get_user(user_id=user).screen_name)
+    else:
+        do_or_wait_15('api.create_block(user_id= '+ str(user)+')')
+        do_or_wait_15('api.destroy_block(user_id= '+ str(user)+')')
+
     i = i + 1
