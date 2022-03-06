@@ -18,6 +18,7 @@ Once you generate consumer key create an access token from same twitter page. Re
 access_token_secret with provided values. Then run the script.
 '''
 
+#If twitter rate limit is reached, wait 15 minutes and try again. https://developer.twitter.com/en/docs/twitter-api/rate-limits.
 def do_or_wait_15(code):
     #print(code)
     while(True):
